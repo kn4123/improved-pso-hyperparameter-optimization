@@ -4,21 +4,23 @@
 
 ## Cấu trúc
 
-- `notebooks/SVM.ipynb`: thí nghiệm với SVM.
-- `notebooks/XGB.ipynb`: thí nghiệm với XGBoost (sẽ được thêm sau khi xác nhận đúng bản notebook).
-- `data/`: CSV cho Letter Recognition và Breast Cancer Wisconsin, dùng làm bản dữ liệu dự phòng.
+- `notebooks/XGB.ipynb`: thực nghiệm với XGBoost.
+- `notebooks/SVM.ipynb`: thực nghiệm với SVM.
+- `data/`: CSV dự phòng cho Letter Recognition và Breast Cancer Wisconsin.
 - `results/summary.csv`: bảng tổng hợp Loss, Accuracy (%) và thời gian chạy.
-- `requirements.txt`: thư viện Python cần thiết.
+- `requirements.txt`: các thư viện Python cần thiết.
 
 ## Thuật toán
 
 AIW-PSO kết hợp trọng số quán tính thích nghi, hệ số gia tốc biến thiên theo thời gian (TVAC) và cơ chế tái khởi tạo một phần quần thể khi quá trình tìm kiếm bị trì trệ.
 
-## Dữ liệu và cách tải dự phòng
+## Dữ liệu
 
-Notebook có thể tải Letter Recognition từ OpenML. Nếu `fetch_openml("letter", version=1)` không tải được do mạng hoặc OpenML tạm thời không truy cập được, dùng file dự phòng trong `data/letter_recognition.csv`.
+Notebook tải Letter Recognition từ OpenML bằng `fetch_openml("letter", version=1)`. Breast Cancer Wisconsin được tải từ bộ dữ liệu tích hợp trong scikit-learn. Các file trong `data/` là bản dự phòng để dùng khi không thể tải dữ liệu trực tuyến.
 
-Mở notebook từ thư mục `notebooks/` trong repo rồi thay cell tải Letter Recognition bằng:
+## Nếu không tải được dữ liệu trực tuyến
+
+Không cần chỉnh sửa file notebook. Nếu cell tải Letter Recognition từ OpenML bị lỗi, bỏ qua cell đó và chạy một cell mới với đoạn sau:
 
 ```python
 import pandas as pd
@@ -29,9 +31,9 @@ x = df.drop(columns="target").to_numpy()
 y = LabelEncoder().fit_transform(df["target"].astype(str))
 ```
 
-File có 20.000 dòng dữ liệu, 16 đặc trưng và cột nhãn `target`.
+Đoạn này tạo lại hai biến `x` và `y` mà các cell thí nghiệm sử dụng. File có 20.000 dòng, 16 đặc trưng và cột nhãn `target`.
 
-Breast Cancer Wisconsin được tải từ scikit-learn. Nếu môi trường không tải được hoặc muốn dùng bản CSV kèm repo, thay cell tải dữ liệu bằng:
+Nếu không tải được Breast Cancer Wisconsin từ scikit-learn, bỏ qua cell tải dữ liệu tương ứng và chạy cell mới:
 
 ```python
 import pandas as pd
@@ -42,6 +44,8 @@ y = df["target"].to_numpy()
 ```
 
 File có 569 dòng, 30 đặc trưng và cột nhãn `target`.
+
+Các đường dẫn trên giả định notebook được mở từ thư mục `notebooks/` trong repository. Nếu môi trường notebook dùng thư mục làm việc khác, điều chỉnh đường dẫn tương đối tới thư mục `data/`.
 
 ## Cài đặt
 
@@ -55,5 +59,4 @@ Mở notebook trong Kaggle hoặc Jupyter Notebook và chạy các cell theo th�
 
 ## Kết quả
 
-Xem toàn bộ kết quả tại [results/summary.csv](results/summary.csv). Các số liệu là kết quả thực nghiệm đã ghi nhận; không nên so sánh thời gian giữa các máy có cấu hình khác nhau.
-
+Xem toàn bộ kết quả tại [results/summary.csv](results/summary.csv). Thời gian chạy không nên so sánh giữa các máy có cấu hình khác nhau.
