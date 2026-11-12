@@ -20,7 +20,7 @@ Notebook tải Letter Recognition từ OpenML bằng `fetch_openml("letter", ver
 
 ## Nếu không tải được dữ liệu trực tuyến
 
-Không cần chỉnh sửa file notebook. Nếu cell tải Letter Recognition từ OpenML bị lỗi, bỏ qua cell đó và chạy một cell mới với đoạn sau:
+Nếu cell tải Letter Recognition từ OpenML bị lỗi, bỏ qua cell đó và chạy một cell mới với đoạn sau:
 
 ```python
 import pandas as pd
