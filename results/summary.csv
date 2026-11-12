@@ -1,0 +1,21 @@
+model,dataset,method,loss,accuracy_percent,time_seconds,cv_folds,environment,result_source
+XGBoost,Breast Cancer Wisconsin,Default,0.08479626,97.3638,3.30,5,Kaggle,XGB.ipynb saved output
+XGBoost,Breast Cancer Wisconsin,Grid Search,0.08173931,97.7146,28.40,5,Kaggle,XGB.ipynb saved output
+XGBoost,Breast Cancer Wisconsin,Random Search,0.07892754,97.5376,33.53,5,Kaggle,XGB.ipynb saved output
+XGBoost,Breast Cancer Wisconsin,PSO,0.07508019,97.5392,208.98,5,Kaggle,XGB.ipynb saved output
+XGBoost,Breast Cancer Wisconsin,AIW-PSO,0.07628777,97.3638,168.27,5,Kaggle,XGB.ipynb saved output
+XGBoost,Letter Recognition,Default,0.12207892,96.2550,11.68,5,Kaggle,XGB.ipynb saved output
+XGBoost,Letter Recognition,Grid Search,0.11053476,96.5400,1445.79,5,Kaggle,XGB.ipynb saved output
+XGBoost,Letter Recognition,Random Search,0.10903801,96.5500,2795.76,5,Kaggle,User-provided rerun output (XGB Random Search cell)
+XGBoost,Letter Recognition,PSO,0.10603648,96.6400,28582.86,5,Kaggle,XGB.ipynb saved output
+XGBoost,Letter Recognition,AIW-PSO,0.10710263,96.6400,26159.54,5,Kaggle,XGB.ipynb saved output
+SVM,Breast Cancer Wisconsin,Default,0.20336145,91.2172,0.25,3,Kaggle,SVM.ipynb saved output
+SVM,Breast Cancer Wisconsin,Grid Search,0.17041052,93.1439,43.73,3,Kaggle,SVM.ipynb saved output
+SVM,Breast Cancer Wisconsin,Random Search,0.18449356,94.0211,45.67,3,Kaggle,SVM.ipynb saved output
+SVM,Breast Cancer Wisconsin,PSO,0.17029311,93.6718,115.89,3,Kaggle,SVM.ipynb saved output
+SVM,Breast Cancer Wisconsin,AIW-PSO,0.17052135,93.4979,101.52,3,Kaggle,SVM.ipynb saved output
+SVM,Letter Recognition,Default,0.26561043,91.9300,140.93,3,Kaggle,SVM.ipynb saved output
+SVM,Letter Recognition,Grid Search,0.12911092,96.5300,704.88,3,Kaggle,SVM.ipynb saved output
+SVM,Letter Recognition,Random Search,0.10352883,97.4000,3268.92,3,Kaggle,SVM.ipynb saved output
+SVM,Letter Recognition,PSO,0.10298409,97.4100,26960.63,3,Kaggle,SVM.ipynb saved output
+SVM,Letter Recognition,AIW-PSO,0.10325279,97.4150,17419.88,3,Kaggle,SVM.ipynb saved output
